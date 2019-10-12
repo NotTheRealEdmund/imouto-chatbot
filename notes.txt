@@ -1,0 +1,27 @@
+First time set-up.
+Make sure you have anaconda for python.
+Open anaconda prompt.
+To create a new environment: "conda create -n chatbot python=3.6"
+To start the new environment: "conda activate chatbot"
+To install numpy and tensorflow packages: "conda install numpy", "conda install tensorflow"
+To install the tflearn package, go to the website https://github.com/tflearn/tflearn and download a copy in a zip form. Extract the files 
+in the zip file. Delete the outer folder. Move the tflearn-master folder into the Chatbot folder. Then inside the anaconda prompt type: 
+"cd\Users\edmun\OneDrive\Desktop\Chatbot\tflearn-master" to navigate to that folder directory. Then type: "setup.py install"
+To install nltk package: "conda install nltk", "python", "import nltk", "nltk.download()"
+When the pop-up appears, select all at the very top and click download (it will take a long time, approximately 15 minutes)
+*******************************************************************************************************************************************
+Every time you wish to customise the responses of the chatbot, open intents.json with notepad and change it.
+The "tag" is a category which the user input falls under, such as a greeting or goodbye.
+The "patterns" are the possible user inputs, and the "responses" are the appropriate replies to the user input.
+The good thing is that the user input does not have to match exactly, the intents are not hard-coded, the program will figure it out.
+If the user input is too incomprehensible, the program will return a message asking for another question instead of giving a reply which 
+doesn't make sense.
+
+After updating, remember to retrain it. Delete the data.pickle file and uncomment the line "model = tflearn.DNN(net)" before running 
+main.py again. This will update the changes you've made to the intents.json file. After running main.py once, remember to re-comment the
+line "model = tflearn.DNN(net)" in main.py again.
+*******************************************************************************************************************************************
+Every time you wish to start this chatbot, open anaconda prompt and type the following commands below.
+"activate chatbot" (to start the environment)
+"cd\Users\edmun\OneDrive\Desktop\Chatbot" (to move to the correct directory)
+"python main.py" (to run the chatbot) 
