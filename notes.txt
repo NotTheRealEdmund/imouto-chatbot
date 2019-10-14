@@ -17,9 +17,8 @@ The good thing is that the user input does not have to match exactly, the intent
 If the user input is too incomprehensible, the program will return a message asking for another question instead of giving a reply which 
 doesn't make sense.
 
-After updating, remember to retrain it. Delete the data.pickle file and uncomment the line "model = tflearn.DNN(net)" before running 
-main.py again. This will update the changes you've made to the intents.json file. After running main.py once, remember to re-comment the
-line "model = tflearn.DNN(net)" in main.py again.
+After updating, remember to retrain it. Delete the data.pickle file and all the model.tflearn files before running main.py again. This 
+will update the changes you've made to the intents.json file.
 *******************************************************************************************************************************************
 Every time you wish to start this chatbot, open anaconda prompt and type the following commands below.
 "activate chatbot" (to start the environment)
